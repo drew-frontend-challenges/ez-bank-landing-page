@@ -56,3 +56,19 @@ button, .button {
   padding: 0.8rem 1.9rem;
   cursor: pointer;
 }
+
+// Visibility
+.hide-for-mobile {
+  // for mobile phones and tablets
+  @include breakpoints-down(medium) {
+    display: none;
+  };
+} 
+
+.hide-for-desktop {
+  // hide for desktops
+  @include breakpoints-up (large) {
+    display: none;
+  };
+}
+

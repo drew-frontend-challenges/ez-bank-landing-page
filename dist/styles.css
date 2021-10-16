@@ -81,7 +81,7 @@ button, .button {
 }
 
 .header nav {
-  padding: 24px;
+  padding: 1.0625rem 1.5rem;
 }
 
 .header__menu > span {
@@ -98,9 +98,22 @@ button, .button {
 .header__links a {
   font-size: 0.875rem;
   color: #9698a6;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+  padding-bottom: 1.6875rem;
 }
 
 .header__links a:not(:last-child) {
   margin-right: 32px;
+}
+
+.header__links a:hover {
+  color: #2d314d;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  -o-border-image: linear-gradient(90deg, #31d35c, #2bb7da);
+     border-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+     border-image: linear-gradient(90deg, #31d35c, #2bb7da);
+  border-image-slice: 1;
 }
 /*# sourceMappingURL=styles.css.map */

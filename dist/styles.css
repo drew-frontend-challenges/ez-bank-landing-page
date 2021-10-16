@@ -86,30 +86,30 @@ button, .button {
 
 .header__menu > span {
   display: block;
-  width: 26px;
-  height: 2px;
+  width: 1.625rem;
+  height: 0.125rem;
   background-color: #2d314d;
 }
 
 .header__menu > span:not(:last-child) {
-  margin-bottom: 3px;
+  margin-bottom: 0.1875rem;
 }
 
 .header__links a {
   font-size: 0.875rem;
   color: #9698a6;
-  -webkit-transition: color 200ms ease-in-out;
-  transition: color 200ms ease-in-out;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   padding-bottom: 1.6875rem;
 }
 
 .header__links a:not(:last-child) {
-  margin-right: 32px;
+  margin-right: 2rem;
 }
 
 .header__links a:hover {
   color: #2d314d;
-  border-bottom-width: 4px;
+  border-bottom-width: 0.25rem;
   border-bottom-style: solid;
   -o-border-image: linear-gradient(90deg, #31d35c, #2bb7da);
      border-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));

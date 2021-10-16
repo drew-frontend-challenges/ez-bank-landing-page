@@ -1,5 +1,5 @@
 .header {
-	
+
   nav {
     padding: 1.0625rem 1.5rem;
   }
@@ -12,12 +12,12 @@
   &__menu {
     > span {
       display: block;
-      width: 26px;
-      height: 2px;
+      width: 1.625rem;
+      height: 0.125rem;
       background-color: $dark-blue;
 
       &:not(:last-child) {
-        margin-bottom: 3px;
+        margin-bottom: 0.1875rem;
       }
     }
   }
@@ -26,17 +26,17 @@
     a {
       font-size: $font-sm;
       color: $grayish-blue;
-      transition: color 200ms ease-in-out;
+      transition: all 0.2s;
 			padding-bottom: 1.6875rem;
 
       &:not(:last-child) {
-        margin-right: 32px;
+        margin-right: 2rem;
       }
     }
 
     a:hover {
       color: $dark-blue;
-      border-bottom-width: 4px;
+      border-bottom-width: 0.25rem;
       border-bottom-style: solid;
       border-image: linear-gradient(90deg, $lime-green, $bright-cyan);
       border-image-slice: 1;

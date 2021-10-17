@@ -1,0 +1,131 @@
+@ Commit 1:
+- Go to Frontend Mentor and download the starter files, put them into the repository
+- Adjust settings.json for Live Sass Compiler:
+    "liveSassCompile.settings.formats": [
+        {
+        "format": "expanded", // can also be 'compressed'
+        "extensionName": ".css", // create file as this extension
+        "savePath": "/dist" // will produce css file in here
+        }
+    ]
+- style-guide.md: to follow the conventions they give you
+
+----------------------------------------------------------------------
+
+@ Commit 2:
+- Create: app > js (contains js file) + scss (contains scss files)
+- In scss:
+    + styles.css is where to import all the individual scss files
+    + _globals and _variables are should have
+    * REMEBER TO IMPORT THE SCSS FILES INTO STYLES.SCSS
+- Must have for base css file:
+    html {
+        font-size: 100%;
+        box-sizing: border-box;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        line-height: 1.3;
+    }
+
+----------------------------------------------------------------------
+    
+@ Commit 3:
+- Hit Watch sass and it will produce css and css map files in dist directory
+
+----------------------------------------------------------------------
+
+@ Commit 4:
+- Most of the time, the nav bar contents will lead you to somewhere so even if there is a butto, just use <a>
+- Break the styles for header into another scss file then import it to styles.scss
+- Put variables into _variabless.scss
+* REMEMBER THE ';'
+- Use <link> to add font into your website
+- Use & to create custom classes that stick with certain styles:
+    .flex {
+        display: flex;
+    
+        &-jc-c {
+        justify-content: center;
+        }
+    
+        &-jc-sb {
+        justify-content: space-between;
+        }
+    
+        &-ai-c {
+        align-items: center;
+        }
+    }
+- Use this to exclude a style from the last child:
+    &:not(:last-child) {}
+
+----------------------------------------------------------------------
+    
+@ Commit 5:
+- Create variables whenever you feel like you need to use a value repeatedly
+- How to create gradient background for certain degree:
+    background-image: linear-gradient(90deg, $lime-green, $bright-cyan);
+    + Read more: https://www.w3schools.com/cssref/func_linear-gradient.asp
+
+----------------------------------------------------------------------
+    
+@ Commit 6: IMPORTANT - Responsiveness
+- _mixins:
+    // 640px, 1024px, 1400px 
+    $breakpoints-up: ( <- map of screen widths
+    "medium": "40em",
+    "large": "64em",
+    "xlarge": "87.5em",
+    );
+
+    // 639px, 1023px, 1399px
+    $breakpoints-down: (
+    "small": "39.9375em",
+    "medium": "63.9375em",
+    "large": "87.3475em",
+    );
+
+    @mixin breakpoints-up($size) { <- using mixin because we want to change the state of something, not returning
+        @media (min-width: map-get($breakpoints-up, $size)) { <- map-get is a function
+            @content;<- serve the content where this mixin is gonna be used
+        }
+    }
+
+    @mixin breakpoints-down($size) {
+        @media (max-width: map-get($breakpoints-down, $size)) {
+            @content;
+        }
+    }
+- _styles.scss:
+    .hide-for-mobile { <- use this class to put where you want in html
+    // for mobile phones and tablets
+    @include breakpoints-down(medium) { <- pass in map key
+        display: none; <- put in content
+    };
+    } 
+
+    .hide-for-desktop {
+    // hide for desktops
+    @include breakpoints-up (large) {
+        display: none;
+    };
+    }
+
+----------------------------------------------------------------------
+
+@ Commit 7 -> 9: 
+- To create gradient border:
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-image: linear-gradient(90deg, $lime-green, $bright-cyan);
+    border-image-slice: 1;
+- IT IS BETTER TO CONVERT px TO rem BY DIVIDING px by 16

@@ -1,5 +1,4 @@
 .header {
-
   nav {
     padding: 1.0625rem 1.5rem;
   }
@@ -15,9 +14,25 @@
       width: 1.625rem;
       height: 0.125rem;
       background-color: $dark-blue;
+      transition: all 0.3s ease-in-out;
+      transform-origin: 5.5px 1.5px;
 
       &:not(:last-child) {
         margin-bottom: 0.1875rem;
+      }
+    }
+
+    &.open {
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+
+      > span:last-child {
+        transform: rotate(-45deg);
       }
     }
   }
@@ -27,7 +42,7 @@
       font-size: $font-sm;
       color: $grayish-blue;
       transition: all 0.2s;
-			padding-bottom: 1.6875rem;
+      padding-bottom: 1.6875rem;
 
       &:not(:last-child) {
         margin-right: 2rem;

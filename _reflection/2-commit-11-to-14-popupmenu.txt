@@ -1,0 +1,21 @@
+@ Commit 11:
+- Use browser dev tool to preview the transform origin when dealing with rotation. Read more at: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
+
+----------------------------------------------------------------------
+
+@ Commit 12:
+- Computed style is different from regular style
+- In linear gradient, on the right of the color there is another param to specify to how much the color will cover:
+    linear-gradient($dark-blue -20%, transparent);
+
+----------------------------------------------------------------------
+
+@ Commit 13.1:
+- That trick to prevent the body from scrolling:
+    document.body.style.height = "100%";
+    document.body.style.overflow = "hidden";
+
+----------------------------------------------------------------------
+
+@ Commit 14:
+- The use of setTimeout to make something happens asynchronously later (not sure this is the best way so consider when using)

@@ -29,12 +29,13 @@
 <body>
   <header class="header">
     <div id="ovl" class="overlay"></div>
+
     <nav class="flex flex-jc-sb flex-ai-c">
       <a class="header__logo" href="/">
         <img src="./images/logo.svg" alt="Easybank" />
       </a>
 
-      <a id="hambgbtn" class="header__menu hide-for-desktop" href="#">
+      <a id="hambgbtn" class="header__toggle hide-for-desktop" href="#">
         <span></span>
         <span></span>
         <span></span>
@@ -50,19 +51,19 @@
 
       <a class="button hide-for-mobile">Request Invite</a>
     </nav>
+
+    <div id="popupmenu" class="header__menu hide-for-desktop">
+      <div class="header__menu__links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+      </div>
+    </div>
   </header>
 
-
-   
-  Home
-  About
-  Contact
-  Blog
-  Careers
-
   Request Invite
-
-
 
   Next generation digital banking
 
@@ -129,12 +130,12 @@
 
   Request Invite
 
-  © Easybank. All Rights Reserved 
+  © Easybank. All Rights Reserved
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div> 
+  </div>
 
   <script src="./app/js/script.js"></script>
 </body>

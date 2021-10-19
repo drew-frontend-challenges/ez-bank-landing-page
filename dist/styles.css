@@ -35,14 +35,14 @@
 }
 
 .fade-in {
-  -webkit-animation: fadeIn 0.25s;
-          animation: fadeIn 0.25s;
+  -webkit-animation: fadeIn 0.2s;
+          animation: fadeIn 0.2s;
   opacity: 1;
 }
 
 .fade-out {
-  -webkit-animation: fadeOut 0.25s;
-          animation: fadeOut 0.25s;
+  -webkit-animation: fadeOut 0.2s;
+          animation: fadeOut 0.2s;
   opacity: 0;
 }
 
@@ -149,7 +149,7 @@ button:hover, .button:hover {
   background-image: linear-gradient(#2d314d -20%, transparent);
 }
 
-.header__menu > span {
+.header__toggle > span {
   display: block;
   width: 1.625rem;
   height: 0.125rem;
@@ -160,20 +160,20 @@ button:hover, .button:hover {
           transform-origin: 5.5px 1.5px;
 }
 
-.header__menu > span:not(:last-child) {
+.header__toggle > span:not(:last-child) {
   margin-bottom: 0.1875rem;
 }
 
-.header__menu.open > span:first-child {
+.header__toggle.open > span:first-child {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.header__menu.open > span:nth-child(2) {
+.header__toggle.open > span:nth-child(2) {
   opacity: 0;
 }
 
-.header__menu.open > span:last-child {
+.header__toggle.open > span:last-child {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -198,5 +198,40 @@ button:hover, .button:hover {
      border-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
      border-image: linear-gradient(90deg, #31d35c, #2bb7da);
   border-image-slice: 1;
+}
+
+.header__menu {
+  position: fixed;
+  padding: 24px;
+  width: 100%;
+  height: 312px;
+}
+
+.header__menu__links {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  border-radius: 5px;
+}
+
+.header__menu__links a {
+  color: #2d314d;
+  font-size: 1.125rem;
+  width: 100%;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -10,10 +10,14 @@ hambgbtn.addEventListener("click", function () {
     ovl.classList.add("fade-in");
     ovl.classList.remove("fade-out");
     ovl.style.opacity = 1;
+    document.body.style.height = "100%";
+    document.body.style.overflow = "hidden";
   } else {
     hambgClicked = false;
     ovl.classList.add("fade-out");
     ovl.classList.remove("fade-in");
     ovl.style.opacity = 0;
+    document.body.style.height = "";
+    document.body.style.overflow = "";
   }
 });

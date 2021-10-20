@@ -20,5 +20,19 @@
   }
 
   &__text {
+		text-align: center;
+
+		h1 {
+			font-weight: 300;
+			color: $dark-blue;
+			font-size: 2.31rem;
+			line-height: 1.15;
+			margin-bottom: 1.5rem;
+		}
+
+		p {
+			line-height: 1.5;
+			margin-bottom: 2.25rem;
+		}
   }
 }

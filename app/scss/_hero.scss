@@ -1,4 +1,9 @@
 .hero {
+  @include breakpoints-up(large) {
+    display: flex;
+    align-items: center;
+  }
+
   &__image {
     position: relative;
     background-image: url("../../ez-bank-landing-page/images/bg-intro-mobile.svg");
@@ -17,22 +22,35 @@
       background-repeat: no-repeat;
       background-position: center bottom;
     }
+
+    @include breakpoints-up(large) {
+      flex: 3;
+      order: 2;
+      min-height: 41rem;
+      background-image: url("../../ez-bank-landing-page/images/bg-intro-desktop.svg");
+      background-position: left center;
+    }
   }
 
   &__text {
-		text-align: center;
+    text-align: center;
 
-		h1 {
-			font-weight: 300;
-			color: $dark-blue;
-			font-size: 2.31rem;
-			line-height: 1.15;
-			margin-bottom: 1.5rem;
-		}
+    h1 {
+      font-weight: 300;
+      color: $dark-blue;
+      font-size: 2.31rem;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
 
-		p {
-			line-height: 1.5;
-			margin-bottom: 2.25rem;
-		}
+    p {
+      line-height: 1.5;
+      margin-bottom: 2.25rem;
+    }
+
+    @include breakpoints-up(large) {
+      flex: 2;
+      order: 1;
+    }
   }
 }

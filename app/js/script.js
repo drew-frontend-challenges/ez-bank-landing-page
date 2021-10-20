@@ -2,6 +2,7 @@ let hambg = document.getElementById("hambgbtn");
 let ovl = document.getElementById("ovl");
 let popup = document.getElementById("popupmenu");
 popup.style.display = "none";
+ovl.style.display = "none";
 let hambgClicked = false;
 
 hambgbtn.addEventListener("click", function () {
@@ -15,7 +16,9 @@ hambgbtn.addEventListener("click", function () {
     // add fade in effect for overlay
     ovl.classList.add("fade-in");
     ovl.classList.remove("fade-out");
+    ovl.style.display = "block";
     ovl.style.opacity = 1;
+    ovl.style.zIndex = 1;
 
     // prevent body from scrolling
     document.body.style.height = "100%";
@@ -25,6 +28,7 @@ hambgbtn.addEventListener("click", function () {
     popup.classList.add("fade-in");
     popup.classList.remove("fade-out");
     popup.style.display = "block";
+    popup.style.zIndex = 2;
   } else {
     // keep track of state and change state
     hambgClicked = false;
@@ -32,6 +36,7 @@ hambgbtn.addEventListener("click", function () {
     // // add fade out effect for overlay
     ovl.classList.add("fade-out");
     ovl.classList.remove("fade-in");
+    ovl.style.display = "none";
     ovl.style.opacity = 0;
 
     // allow body scrolling
